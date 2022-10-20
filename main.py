@@ -139,6 +139,13 @@ def send_message(to_user, access_token, region_name, weather, temp, feelsLike, v
     love_date = date(love_year, love_month, love_day)
     # 获取在一起的日期差
     love_days = str(today.__sub__(love_date)).split(" ")[0]
+    # 获取在一起2的日子的日期格式
+    love2_year = int(config["love2_date"].split("-")[0])
+    love2_month = int(config["love2_date"].split("-")[1])
+    love2_day = int(config["love2_date"].split("-")[2])
+    love2_date = date(love2_year, love2_month, love2_day)
+    # 获取在一起的日期差
+    love2_days = str(today.__sub__(love2_date)).split(" ")[0]
     # 获取所有生日数据
     birthdays = {}
     for k, v in config.items():
